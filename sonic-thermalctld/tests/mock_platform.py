@@ -266,6 +266,22 @@ class MockThermal(thermal_base.ThermalBase):
     def get_low_critical_threshold(self):
         return self._low_critical_threshold
 
+    def set_high_threshold(self, value):
+        self.high_threshold = value
+        return True
+
+    def set_low_threshold(self, value):
+        self.low_threshold = value
+        return True
+
+    def set_high_critical_threshold(self, value):
+        self.high_critical_threshold = value
+        return True
+
+    def set_low_critical_threshold(self, value):
+        self.low_critical_threshold = value
+        return True
+
     def make_over_temper(self):
         self._high_threshold = 2
         self._temperature = 3
